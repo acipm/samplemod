@@ -6,9 +6,9 @@ env:
 on: 
   push:
     paths:
-      - '${{packageName}}'
+      - ${{packageName}}
   pull_request:
-      - '${{packageName}}'
+      - ${{packageName}}
 
 jobs:
   build:
