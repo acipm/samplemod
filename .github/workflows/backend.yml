@@ -6,10 +6,10 @@ env:
 on: 
   push:
     paths:
-      - ${{packageName}}
+      - "${{packageName}}/**"
   pull_request:
     paths:
-      - ${{packageName}}
+      - "${{packageName}}/**"
 
 jobs:
   build:
