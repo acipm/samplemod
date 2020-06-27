@@ -2,9 +2,6 @@ name: Python package
 
 on: [push]
 
-env:
-  packageName: 'sample'
-
 jobs:
   build:
 
@@ -33,13 +30,3 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Build documentation with pydoc3
-      run: |
-        pdoc -f -o build --html ${{ env.packageName }}
-    - name: Deploy documentation onto gh-pages
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build/${{ env.packageName }} # The folder the action should deploy.
-        CLEAN: true
