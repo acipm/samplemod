@@ -11,5 +11,5 @@ jobs:
       with:
         python-version: [3.8, pypy3]
     - name: run tests
-      run: |
+      run:
         pip install .
