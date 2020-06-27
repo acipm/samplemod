@@ -1,6 +1,14 @@
 name: Python package
 
-on: [push, pull_request]
+env:
+  packageName: sample
+
+on: 
+  push:
+    paths:
+      - '${{packageName}}'
+  pull_request:
+      - '${{packageName}}'
 
 jobs:
   build:
