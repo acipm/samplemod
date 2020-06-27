@@ -1,8 +1,5 @@
 name: Python package
 
-env:
-  packageName: sample
-
 on: [push, pull_request]
 
 jobs:
