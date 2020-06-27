@@ -3,13 +3,7 @@ name: Python package
 env:
   packageName: sample
 
-on: 
-  push:
-    paths:
-      - "${{packageName}}/**"
-  pull_request:
-    paths:
-      - "${{packageName}}/**"
+on: [push, pull_request]
 
 jobs:
   build:
